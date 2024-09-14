@@ -1,0 +1,8 @@
+{
+    "name": "new repository",
+    "description": "new repository",
+    "manifestVersion": 1,
+    "pluginLists": [
+      "https://raw.githubusercontent.com/digitalus00/Learning/builds/plugins.json"
+    ]
+}
