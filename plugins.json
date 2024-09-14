@@ -150,7 +150,7 @@
             "TvSeries",
             "NSFW"
         ],
-        "version": 13,
+        "version": 14,
         "internalName": "SkymoviesHD",
         "description": "480p, 720p, 1080p Full Movies In SkymoviesHD",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/SkymoviesHD.cs3",
