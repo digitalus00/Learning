@@ -83,7 +83,8 @@ object UltimaMediaProvidersUtils {
                     AnitakuMediaProvider(),
                     MoviesDriveProvider(),
                     VidSrcMediaProvider(),
-                    HiAnimeMediaProvider()
+                    HiAnimeMediaProvider(),
+                    skymovieshdMediaProvider()
             )
 
     suspend fun invokeExtractors(
