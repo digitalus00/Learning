@@ -1,139 +1,22 @@
 [
     {
-        "iconUrl": "http://new.circleftp.net/static/media/logo.fce2c9029060a10687b8.png",
+        "iconUrl": "https://raw.githubusercontent.com/Rowdy-Avocado/Rowdycado-Extensions/master/logos/ultima.png",
         "apiVersion": 1,
-        "repositoryUrl": "https://github.com/digitalus00/Learning",
-        "fileSize": 17066,
-        "status": 1,
-        "language": "bn",
-        "authors": [
-            "new"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries",
-            "Anime",
-            "AnimeMovie",
-            "OVA",
-            "Cartoon",
-            "AsianDrama",
-            "Others",
-            "Documentary"
-        ],
-        "version": 17,
-        "internalName": "Circleftp",
-        "description": "learning ",
-        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Circleftp.cs3",
-        "name": "Circleftp"
-    },
-    {
-        "iconUrl": "https://www.emwbd.xyz/wp-content/uploads/2024/07/cropped-20240718_170236-192x192.png",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/digitalus00/Learning",
-        "fileSize": 9796,
-        "status": 1,
-        "language": "bn",
-        "authors": [
-            "new"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries",
-            "AnimeMovie",
-            "AsianDrama"
-        ],
-        "version": 6,
-        "internalName": "EmwBD",
-        "description": "new",
-        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/EmwBD.cs3",
-        "name": "EmwBD"
-    },
-  
-    {
-        "iconUrl": "https://images.nightcafe.studio/jobs/CoDdYzJ7jvJ8L2NXtPBh/CoDdYzJ7jvJ8L2NXtPBh--2--gflwm.jpg",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/digitalus00/Learning",
-        "fileSize": 9880,
+        "repositoryUrl": "https://github.com/Rowdy-Avocado/Rowdycado-Extensions",
+        "fileSize": 183052,
         "status": 1,
         "language": "en",
         "authors": [
-            "new"
+            "RowdyRushya"
         ],
         "tvTypes": [
-            "Others"
+            "All"
         ],
-        "version": 3,
-        "internalName": "FullMatch",
-        "description": "Watch FootBall Matches",
-        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/FullMatch.cs3",
-        "name": "FullMatch"
-    },
-  
-    
-   
-    {
-        "iconUrl": "https://www.oomoye.co/favicon.png",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/digitalus00/Learning",
-        "fileSize": 9969,
-        "status": 1,
-        "language": "en",
-        "authors": [
-            "new"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries",
-            "Cartoon"
-        ],
-        "version": 11,
-        "internalName": "Oomoye",
-        "description": "Indian movie site",
-        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Oomoye.cs3",
-        "name": "Oomoye"
-    },
-    {
-        "iconUrl": "https://rtally.vercel.app/rtally.png",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/digitalus00/Learning",
-        "fileSize": 14554,
-        "status": 1,
-        "language": "bn",
-        "authors": [
-            "new"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries",
-            "Anime",
-            "AnimeMovie",
-            "AsianDrama"
-        ],
-        "version": 7,
-        "internalName": "Rtally",
-        "description": "Movie website ",
-        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Rtally.cs3",
-        "name": "Rtally"
-    },
-    {
-        "iconUrl": "https://rtally18.vercel.app/rtally18.png",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/digitalus00/Learning",
-        "fileSize": 15630,
-        "status": 1,
-        "language": "bn",
-        "authors": [
-            "new"
-        ],
-        "tvTypes": [
-            "Movie",
-            "NSFW"
-        ],
-        "version": 4,
-        "internalName": "Rtally18",
-        "description": "18+ website ",
-        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Rtally18.cs3",
-        "name": "Rtally18"
+        "version": 40,
+        "internalName": "Ultima",
+        "description": "The ultimate All-in-One home screen to access all of your extensions at one place (You need to select/deselect sections in Ultima's settings to load other extensions on home screen)",
+        "url": "https://raw.githubusercontent.com/Rowdy-Avocado/Rowdycado-Extensions/builds/Ultima.cs3",
+        "name": "Ultima"
     },
     {
         "iconUrl": "https://skymovieshd.diy/images/logo2.png",
