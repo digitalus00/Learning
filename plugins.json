@@ -38,5 +38,26 @@
         "description": "480p, 720p, 1080p Full Movies In SkymoviesHD",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/SkymoviesHD.cs3",
         "name": "SkymoviesHD"
+    },
+     {
+        "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrXEeROPwRYccToJAmhzftdU4uf-6Olo73aA&s",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 11380,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "digitalus00,salman731"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "NSFW"
+        ],
+        "version": 1,
+        "internalName": "9kmovies",
+        "description": "Indian  Provider",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/9kmovies.cs3",
+        "name": "9kmovies"
     }
 ]
