@@ -40,14 +40,14 @@
         "name": "SkymoviesHD"
     },
      {
-        "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrXEeROPwRYccToJAmhzftdU4uf-6Olo73aA&s",
+        "iconUrl": "https://9kmovies.com/wp-content/uploads/2024/08/9kmoviescomm.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/digitalus00/Learning",
         "fileSize": 7072,
         "status": 1,
         "language": "hi",
         "authors": [
-            "digitalus00,salman731"
+            "salman731,digitalus00"
         ],
         "tvTypes": [
             "TvSeries",
