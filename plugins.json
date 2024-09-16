@@ -59,5 +59,26 @@
         "description": "Indian  Provider",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/9kmovies.cs3",
         "name": "9kmovies"
+    },
+     {
+        "iconUrl": "https://www.movies-watch.com.pk/wp-content/uploads/2022/05/logo.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 6088,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "salman731,digitalus00"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+            
+        ],
+        "version": 1,
+        "internalName": "PkMovies",
+        "description": "Indian  Provider",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/PkMovies.cs3",
+        "name": "PkMovies"
     }
 ]
