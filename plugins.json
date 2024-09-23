@@ -80,5 +80,27 @@
         "description": "Indian  Provider",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/WatchMoviesPkProvider.cs3",
         "name": "PkMovies"
+    },
+     {
+        "iconUrl": "https://hindmoviez.club/wp-content/themes/generate-pro/images/favicon.ico",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 10184,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "salman731,digitalus00"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+            
+        ],
+        "version": 1,
+        "internalName": "Hindi Moviez",
+        "description": "480p, 720p, 1080p Full Movies In HindiMoviez",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/HindMoviez.cs3",
+        "name": "Hindi Moviez"
     }
+    
 ]
