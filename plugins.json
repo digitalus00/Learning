@@ -122,6 +122,27 @@
         "description": "480p, 720p, 1080p Full Movies In MP4Moviez",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Mp4Moviez.cs3",
         "name": "Mp4 Moviez"
+    },
+     {
+        "iconUrl": "https://catflix.su/wp-content/themes/distv/resources/assets/img/catflix-dark.svg",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 15000,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "digitalus00"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+            
+        ],
+        "version": 1,
+        "internalName": "Net Movies",
+        "description": "480p, 720p, 1080p Full Movies In MP4Moviez",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/master/NetMovies.cs3",
+        "name": "Net Movies"
     }
     
 ]
