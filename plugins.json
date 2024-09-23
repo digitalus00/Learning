@@ -101,6 +101,27 @@
         "description": "480p, 720p, 1080p Full Movies In HindiMoviez",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/HindMoviez.cs3",
         "name": "Hindi Moviez"
+    },
+    {
+        "iconUrl": "https://www.mp4moviez.glass/images/mp4moviez.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 10000,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "salman731,digitalus00"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+            
+        ],
+        "version": 1,
+        "internalName": "MP4 Moviez",
+        "description": "480p, 720p, 1080p Full Movies In MP4Moviez",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Mp4Moviez.cs3",
+        "name": "Mp4 Moviez"
     }
     
 ]
