@@ -3,7 +3,7 @@ version = 1
 
 cloudstream {
     description = "Free Download All Hollywood, Bollywood, Bangla, TV Series, Turkish/ Chinese Movies | Korean Drama Series In Hindi Dubbed, English (Dual Audio), | HEVC 10bit | X264 300mb | K-Drama | Anime In Hindi | Watch Online"
-    authors = listOf("salman731,digitalus00")
+    authors = listOf("salman731")
 
     /**
     * Status int as the following:
