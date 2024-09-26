@@ -144,7 +144,7 @@
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/master/NetMovies.cs3",
         "name": "Net Movies"
     },
-     {
+      {
         "iconUrl": "https://cinefreak.net/wp-content/uploads/2024/08/cropped-cgk-192x192.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/digitalus00/Learning",
@@ -155,15 +155,16 @@
             "salman731,digitalus00"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries"
+            "TvSeries",
+            "Movie"
             
         ],
         "version": 1,
-        "internalName": "CineFreak ",
-        "description": "480p, 720p, 1080p Full Movies In CineFreak",
-        "url": "https://raw.githubusercontent.com/digitalus00/Learning/master/CineFreak.cs3",
-        "name": "CineFreak"
+        "internalName": "Cine Freak",
+        "description": "Free Download All Hollywood, Bollywood, Bangla, TV Series, Turkish/ Chinese Movies | Korean Drama Series In Hindi Dubbed, English (Dual Audio), | HEVC 10bit | X264 300mb | K-Drama | Anime In Hindi | Watch Online",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/CineFreak.cs3",
+        "name": "Cine Freak"
     }
+   
     
 ]
