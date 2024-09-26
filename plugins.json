@@ -143,6 +143,27 @@
         "description": "480p, 720p, 1080p Full Movies In MP4Moviez",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/master/NetMovies.cs3",
         "name": "Net Movies"
+    },
+     {
+        "iconUrl": "https://cinefreak.net/wp-content/uploads/2024/08/cropped-cgk-192x192.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 15000,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "salman731,digitalus00"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+            
+        ],
+        "version": 1,
+        "internalName": "CineFreak ",
+        "description": "480p, 720p, 1080p Full Movies In CineFreak",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/master/CineFreak.cs3",
+        "name": "CineFreak"
     }
     
 ]
