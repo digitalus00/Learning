@@ -69,6 +69,47 @@ class CineFreakProvider : MainAPI() {
         val home = doc.select(".post").mapNotNull { toResult(it) }
         return newHomePageResponse(request.name, home, hasNext = true)
     }
+      private fun Element.toSearchResult(): SearchResponse? {
+        val title = this.selectFirst("figure > a > img")?.attr("alt").toString()
+        val href = this.selectFirst("figure > a")?.attr("href").toString()
+        val posterUrl = this.selectFirst("figure > a > img")?.attr("src").toString()
+        val quality = getQualityFromString(this.selectFirst("article.post > figure > a > span")?.text().toString())
+    
+        return newMovieSearchResponse(title, href, TvType.Movie) {
+            this.posterUrl = posterUrl
+            this.quality = quality
+        }
+    }
+
+    private fun Element.toSearchResult2(): SearchResponse? {
+        val title = this.selectFirst("figure > div > a > img")?.attr("alt").toString()
+        val href = this.selectFirst("figure > div > a")?.attr("href").toString()
+        val posterUrl = this.selectFirst("figure > div > a > img")?.attr("src").toString()
+        val quality = getQualityFromString(this.selectFirst("article.post > figure > div > a > span")?.text().toString())
+
+        return newMovieSearchResponse(title, href, TvType.Movie) {
+            this.posterUrl = posterUrl
+            this.quality = quality
+        }
+    }
+
+    override suspend fun search(query: String): List<SearchResponse> {
+        val searchResponse = mutableListOf<SearchResponse>()
+
+        for (i in 1..3) {
+            val document = app.get("$mainUrl/page/$i/?s=$query").document
+
+            val results = document.select("article.post").mapNotNull { it.toSearchResult2() }
+
+            if (results.isEmpty()) {
+                break
+            }
+            searchResponse.addAll(results)
+        }
+
+        return searchResponse
+    }
+
 
     private fun toResult(post: Element): SearchResponse {
         val url = post.select(".post-thumbnail").attr("href")
