@@ -164,6 +164,27 @@
         "description": "Free Download All Hollywood, Bollywood, Bangla, TV Series, Turkish/ Chinese Movies | Korean Drama Series In Hindi Dubbed, English (Dual Audio), | HEVC 10bit | X264 300mb | K-Drama | Anime In Hindi | Watch Online",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/CineFreak.cs3",
         "name": "Cine Freak"
+    },
+    {
+        "iconUrl": "https://uwatchfree-official.lol/imgs/uwatchfree-logo.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 15000,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "digitalus00"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+            
+        ],
+        "version": 1,
+        "internalName": "UWatchFree",
+        "description": "Free Download All Hollywood, Bollywood, Bangla, TV Series, Turkish/ Chinese Movies | Korean Drama Series In Hindi Dubbed, English (Dual Audio), | HEVC 10bit | X264 300mb | K-Drama | Anime In Hindi | Watch Online",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/UWatchFreeProvider.cs3",
+        "name": "UWatchFree"
     }
    
     
