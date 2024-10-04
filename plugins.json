@@ -26,7 +26,7 @@
         "status": 1,
         "language": "en",
         "authors": [
-            "new"
+            "redowan99"
         ],
         "tvTypes": [
             "Movie",
@@ -185,6 +185,27 @@
         "description": "Free Download All Hollywood, Bollywood, Bangla, TV Series, Turkish/ Chinese Movies | Korean Drama Series In Hindi Dubbed, English (Dual Audio), | HEVC 10bit | X264 300mb | K-Drama | Anime In Hindi | Watch Online",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/UWatchFreeProvider.cs3",
         "name": "UWatchFree"
+    },
+     {
+        "iconUrl": "https://livemovie.org/wp-content/uploads/2023/11/sso.png.webp",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 15184,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "salman731,digitalus00"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "NSFW"
+        ],
+        "version": 1,
+        "internalName": "LiveMovie",
+        "description": "watch hindi dubbed movie free download, free download latest bollywood movie, south hindi dubbed free movie , english adult movie, free watch 18+ movie",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/LiveMovie.cs3",
+        "name": "LiveMovie"
     }
    
     
