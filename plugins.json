@@ -206,7 +206,46 @@
         "description": "watch hindi dubbed movie free download, free download latest bollywood movie, south hindi dubbed free movie , english adult movie, free watch 18+ movie",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/LiveMovie.cs3",
         "name": "LiveMovie"
+    },
+     {
+        "iconUrl": "https://web.static.mmcdn.com/images/logo.svg?hash=7c993ccd600a",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 10136,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "luck731"
+        ],
+        "tvTypes": [
+            "NSFW"
+        ],
+        "version": 1,
+        "internalName": "Chatrubate",
+        "description": "Chaturbate - Free Adult Webcams, Live Sex, Free Sex Chat, Exhibitionist & Pornstar Free Cams",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Chatrubate.cs3",
+        "name": "Chaturbate"
+    },
+      {
+        "iconUrl": "https://assets.strpst.com/assets/icons/favicon-196x196.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 10136,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "luck731"
+        ],
+        "tvTypes": [
+            "NSFW"
+        ],
+        "version": 1,
+        "internalName": "Stripchat",
+        "description": "Watch Naked Models in our Adult Live Sex Cams Community. ❤️ It's FREE & No Registration Needed. 🔥 4000+ LIVE Cam Girls and Couples are Ready to Chat.",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Stripchat.cs3",
+        "name": "Stripchat"
     }
+   
    
     
 ]
