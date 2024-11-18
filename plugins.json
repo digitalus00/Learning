@@ -283,6 +283,25 @@
         "description": "[!] Requires Setup \n- StremioX allows you to use stream addons \n- StremioC allows you to use catalog addons",
         "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/StremioX.cs3",
         "name": "StremioX2"
+    },
+     {
+        "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92oUgSjuBxvY_3cT3tq442WkcmZl0KaCUHA&s",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/digitalus00/Learning",
+        "fileSize": 10518,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "digitalus00"
+        ],
+        "tvTypes": [
+            "Movie,Torrent"
+        ],
+        "version": 1,
+        "internalName": "Stremio2",
+        "description": "Torrentio (Torrent)",
+        "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/stremio2.cs3",
+        "name": "Stremio2"
     }
    
    
