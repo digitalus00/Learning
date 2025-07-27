@@ -23,35 +23,51 @@ class Fibwatch : MainAPI() {
         "$mainUrl/videos/top/" to "Top Videos",
         "$mainUrl/videos/category/3" to "Web Series"
         )
-    override suspend fun getMainPage(
-        page: Int,
-        request: MainPageRequest
-    ): HomePageResponse {
+    override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
+        val document = app.get("$mainUrl/${request.data}/$page").document
+        val home = document.select(".row pt_cat_vid_list div").mapNotNull { it.toSearchResult() }
 
-        val document = app.get(request.data + page).document
-        val home = document.select(".col-md-3 col-sm-6 col-xs-6 keep-padding").mapNotNull {
-            it.toSearchResult()
-        }
-        return newHomePageResponse(request.name, home)
+        return newHomePageResponse(
+            list = HomePageList(
+                name = request.name,
+                list = home,
+                isHorizontalImages = false
+            ),
+            hasNext = true
+        )
     }
 
-    private fun Element.toSearchResult(): SearchResponse? {
-        val title = this.selectFirst("p.hptag")?.text()?.trim() ?: return null
-        val href = fixUrl(this.selectFirst(".video-list-image a")?.attr("href").toString())
-        val posterUrl = fixUrlNull(this.selectFirst(".video-list-image img")?.attr("src"))
+    private fun Element.toSearchResult(): SearchResponse {
+        val title = this.select(".hptag p").attr("title")
+        val href = fixUrl(this.select(".video-list-image a").attr("href"))
+        val posterUrl = fixUrlNull(this.select(".video-list-image img").attr("src"))
         return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
 
-    override suspend fun search(query: String): List<SearchResponse> {
-        val document = app.get("$mainUrl/?s=$query").document
 
-        return document.select(".col-md-3 col-sm-6 col-xs-6 keep-padding").mapNotNull {
-            it.toSearchResult()
+
+    override suspend fun search(query: String): List<SearchResponse> {
+        val searchResponse = mutableListOf<SearchResponse>()
+
+        for (i in 1..3) {
+            val document = app.get("${mainUrl}/page/$i/?s=$query").document
+
+            val results =
+                document.select(".row pt_cat_vid_list div").mapNotNull { it.toSearchResult() }
+
+            if (!searchResponse.containsAll(results)) {
+                searchResponse.addAll(results)
+            } else {
+                break
+            }
+
+            if (results.isEmpty()) break
         }
+
+        return searchResponse
     }
-//
 //    override suspend fun load(url: String): LoadResponse {
 //        val document = app.get(url).document
 //
