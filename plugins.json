@@ -324,7 +324,7 @@
   },
     
     {
-    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92oUgSjuBxvY_3cT3tq442WkcmZl0KaCUHA&s",
+    "iconUrl": "https://fibwatch.art/themes/default/img/logo-light.png?cache=123",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/digitalus00/Learning",
     "fileSize": 10518,
@@ -334,13 +334,13 @@
       "digitalus00"
     ],
     "tvTypes": [
-      "Movie,Series,NSFW"
+      "Movie,Series"
     ],
     "version": 1,
-    "internalName": "Pr Movies",
-    "description": "Pr Movies ",
-    "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Prmovies.cs3",
-    "name": "Pr Movies"
+    "internalName": "Fibwatch",
+    "description": "Fibwatch",
+    "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/fibwatch.cs3",
+    "name": "Fib Watch"
   }
    
    
