@@ -321,6 +321,26 @@
     "description": "First Time ",
     "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/demotry.cs3",
     "name": "Ero Red"
+  },
+    
+    {
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92oUgSjuBxvY_3cT3tq442WkcmZl0KaCUHA&s",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/digitalus00/Learning",
+    "fileSize": 10518,
+    "status": 1,
+    "language": "hi",
+    "authors": [
+      "digitalus00"
+    ],
+    "tvTypes": [
+      "Movie,Series,NSFW"
+    ],
+    "version": 1,
+    "internalName": "Pr Movies",
+    "description": "Pr Movies ",
+    "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Prmovies.cs3",
+    "name": "Pr Movies"
   }
    
    
