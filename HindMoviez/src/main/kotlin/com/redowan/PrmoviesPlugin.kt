@@ -1,12 +1,13 @@
-package com.redowan
+package recloudstream 
 
+import android.content.Context
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
-import android.content.Context
+
 
 @CloudstreamPlugin
-class HindMoviezPlugin: Plugin() {
+class TestPlugin: Plugin() {
     override fun load(context: Context) {
-        registerMainAPI(HindMoviezProvider())
+        registerMainAPI(Prmovies())
     }
 }
