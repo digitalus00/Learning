@@ -23,40 +23,33 @@ class demoTryProvider : MainAPI() {
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
-        // This is necessary for load more posts on homepage
-        val doc = if(request.data == "" && page == 1) {
-            app.get("$mainUrl").document
-        }
-        else if (request.data == "" && page > 1)
-        {
-            app.get("$mainUrl/page/$page").document
-        }
-        else
-        {
-            app.get("$mainUrl${request.data}page/$page").document
-        }
-        val home = doc.select("content-loop clear").mapNotNull { toResult(it) }
-
-        return newHomePageResponse(HomePageList(request.name, home,isHorizontalImages = false),hasNext = true)
+        val document = app.get("$mainUrl/${request.data}/page/$page").document
+        val home = document.select("div.content-loop clear div").mapNotNull { it.toSearchResult() }
+        return newHomePageResponse(
+            list = HomePageList(
+                name = request.name,
+                list = home,
+                isHorizontalImages = false
+            ),
+            hasNext = true
+        )
     }
-    private fun toResult(post: Element): SearchResponse {
-        val url = post.select("div a").attr("href")
-        // Log.d("salman731 url",url)
-        val title = post.select("div h2 a").text()
-        //Log.d("salman731 title",title)
-        val imageUrl = post.select("div img").attr("src")
-        //Log.d("salman731 imageUrl",imageUrl)
-        return newMovieSearchResponse(title, url, TvType.Movie) {
-            this.posterUrl = imageUrl
+
+    private fun Element.toSearchResult(): SearchResponse {
+        val title = this.select("h2.entry-title a").text()
+        val href = fixUrl(this.select("h2.entry-title a").attr("href"))
+        val posterUrl = fixUrlNull(this.select("div.thumbnail-wrap img").attr("src"))
+        return newMovieSearchResponse(title, href, TvType.Movie) {
+            this.posterUrl = posterUrl
+
         }
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
-        val doc = app.get("$mainUrl/search/$query").document
-        val searchResponse = doc.select("content-loop clear")
-        return searchResponse.mapNotNull { toResult(it) }
+        val document = app.get("${mainUrl}?s=$query", timeout = 50L).document
+        val results =document.select("div.content-loop clear div").mapNotNull { it.toSearchResult() }
+        return results
     }
-
 
 
     override suspend fun load(url: String): LoadResponse? {
