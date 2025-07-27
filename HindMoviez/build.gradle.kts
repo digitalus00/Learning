@@ -1,24 +1,27 @@
 // use an integer for version numbers
-version = 2
+version = 1
 
 cloudstream {
-    description = "720p Movies, 480p Movies, 300MB Movies"
-    authors = listOf("salman731")
+    // All of these properties are optional, you can safely remove any of them.
+
+    language = "en"
+    authors = listOf("digitalus")
 
     /**
-    * Status int as the following:
-    * 0: Down
-    * 1: Ok
-    * 2: Slow
-    * 3: Beta only
-    * */
-    status = 1 // will be 3 if unspecified
+     * Status int as one of the following:
+     * 0: Down
+     * 1: Ok
+     * 2: Slow
+     * 3: Beta-only
+     **/
+    status = 1 // Will be 3 if unspecified
 
     tvTypes = listOf(
         "Movie",
-        "TvSeries"
+        "TvSeries",
+        "NSFW"
     )
-    language = "hi"
+    iconUrl = "https://www.google.com/s2/favicons?domain=http://example.com&sz=256"
 
-    iconUrl = "https://hindmoviez.club/wp-content/themes/generate-pro/images/favicon.ico"
+    isCrossPlatform = true
 }
