@@ -1,81 +1,76 @@
-package com.watchmoviespk
+package recloudstream
 
-import com.lagradost.api.Log
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.loadExtractor
+import com.lagradost.cloudstream3.utils.*
 import org.jsoup.nodes.Element
+import kotlin.text.RegexOption
 
-class WatchMoviesPkProvider : MainAPI() {
+class demoTryProvider : MainAPI() {
 
-    override var mainUrl = "https://www.watch-movies.com.pk"
-    override var name = "WatchMoviesPk"
+    override var mainUrl = "https://erored.com/"
+    override var name = "Ero Red"
     override val hasMainPage = true
-    override var lang = "hi"
-    override val hasQuickSearch = false
-    override val hasDownloadSupport = true
+    override var lang = "en"
     override val supportedTypes = setOf(
-        TvType.Movie,
-        TvType.TvSeries,
+        TvType.NSFW
     )
+
 
     override val mainPage = mainPageOf(
-        "" to "Latest Movies",
-        "/category/indian-movies/action-movies/" to "Action Movies",
-        "/category/indian-movies/funny-movies/" to "Funny Movies",
-        "/category/romantic-movies/" to "Romantic Movies",
-        "/category/horror-movies/" to "Horror Movies",
-        "/category/old-bollywood-movies/" to "Old Bollywood Movies",
-        "/category/indian-movies/south-indian-dubbed-hindi/" to "South Indian Hindi Dubbed Movies",
+        "/scandal" to "Scandal Videos",
+        "/porn" to "Daily Videos",
+        "/celebrities" to "Celebreties Videos",
     )
 
-    override suspend fun getMainPage(
-        page: Int,
-        request: MainPageRequest
-    ): HomePageResponse {
-
-
-       val document = if(request.data == "")
+    override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
+        // This is necessary for load more posts on homepage
+        val doc = if(request.data == "" && page == 1) {
+            app.get("$mainUrl").document
+        }
+        else if (request.data == "" && page > 1)
         {
-            app.get("$mainUrl/page/$page/").document
+            app.get("$mainUrl/page/$page").document
         }
         else
-       {
-           app.get("$mainUrl${request.data}page/$page/").document
-       }
-        val home = document.select(".postbox").mapNotNull {
-            it.toSearchResult()
+        {
+            app.get("$mainUrl${request.data}page/$page").document
         }
+        val home = doc.select("content-loop clear").mapNotNull { toResult(it) }
 
-        return newHomePageResponse(request.name, home,hasNext = true)
+        return newHomePageResponse(HomePageList(request.name, home,isHorizontalImages = false),hasNext = true)
     }
-
-    private fun Element.toSearchResult(): SearchResponse? {
-        val title = this.select(".boxtitle a:nth-of-type(1)").attr("title").replace("Free","").replace("Download","")
-        val href = this.select(".boxtitle a:nth-of-type(1)").attr("href")
-        val posterUrl = this.select(".boxtitle a:nth-of-type(1) img").attr("data-src")
-        return newMovieSearchResponse(title, href, TvType.Movie) {
-            this.posterUrl = posterUrl
+    private fun toResult(post: Element): SearchResponse {
+        val url = post.select("div a").attr("href")
+        // Log.d("salman731 url",url)
+        val title = post.select("div h2 a").text()
+        //Log.d("salman731 title",title)
+        val imageUrl = post.select("div img").attr("src")
+        //Log.d("salman731 imageUrl",imageUrl)
+        return newMovieSearchResponse(title, url, TvType.Movie) {
+            this.posterUrl = imageUrl
         }
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
-        val document = app.get("$mainUrl/?s=$query").document
-        return document.select(".postbox").mapNotNull {
-            it.toSearchResult()
-        }
+        val doc = app.get("$mainUrl/search/$query").document
+        val searchResponse = doc.select("content-loop clear")
+        return searchResponse.mapNotNull { toResult(it) }
     }
 
-    override suspend fun load(url: String): LoadResponse? {
-        val document = app.get(url).document
-        val title = document.select("meta[property=\"og:title\"]").attr("content").replace("Free","").replace("Download","")
-        val poster = document.selectFirst("meta[property=\"og:image\"]")?.attr("content")
-        val tags = document.select(".rightinfo p:nth-of-type(1) a").map { it.text() }
-        return  newMovieLoadResponse(title, url, TvType.Movie, url) {
-            this.posterUrl = poster
-            this.tags = tags
-        }
 
+
+    override suspend fun load(url: String): LoadResponse? {
+        val doc = app.get(url).document
+        val title = doc.select(".page-body h2").text()
+        val imageUrl = doc.select(".page-body img").attr("src")
+        val info = doc.select(".page-body p:nth-of-type(1)").text()
+        val story = ("(?<=Storyline,).*|(?<=Story : ).*|(?<=Storyline : ).*|(?<=Description : ).*|(?<=Description,).*(?<=Story,).*").toRegex().find(info)?.value
+        return newMovieLoadResponse(title, url, TvType.Movie, url) {
+            this.posterUrl = imageUrl
+            if(story != null) {
+                this.plot = story.trim()
+            }
+        }
     }
 
     override suspend fun loadLinks(
@@ -84,23 +79,10 @@ class WatchMoviesPkProvider : MainAPI() {
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit
     ): Boolean {
-        val servers = mutableListOf<String>()
-        val doc = app.get(data).document
-        val links = doc.select(".singcont p a")
-        links.forEach { item ->
-            val url = item.attr("href")
-            var finalUrl = url
-            if(url.contains("d0000d.com"))
-            {
-                finalUrl = url.replace("/d/","/e/")
-            }
-            if(!servers.contains(finalUrl))
-            {
-                servers.add(finalUrl)
-            }
-        }
-        servers.forEach{item ->
-            loadExtractor(item,subtitleCallback,callback)
+        val doc = app.post(data).document
+        doc.select(".col-sm-8.col-sm-offset-2.well.view-well a").forEach {
+            val link = it.attr("href")//.replace("/v/","/e/")
+            loadExtractor(link, subtitleCallback, callback)
         }
         return true
     }
