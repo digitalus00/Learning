@@ -18,10 +18,10 @@ class Fibwatch : MainAPI() {
         TvType.TvSeries
     )
     override val mainPage = mainPageOf(
-        "/videos/latest/" to "Latest Videos",
-        "/videos/trending/" to "Trending Videos",
-        "/videos/top/" to "Top Videos",
-        "/videos/category/3" to "Web Series"
+        "$mainUrl/videos/latest/" to "Latest Videos",
+        "$mainUrl/videos/trending/" to "Trending Videos",
+        "$mainUrl/videos/top/" to "Top Videos",
+        "$mainUrl/videos/category/3" to "Web Series"
         )
     override suspend fun getMainPage(
         page: Int,
