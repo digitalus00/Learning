@@ -4,7 +4,7 @@ version = 1
 cloudstream {
     // All of these properties are optional, you can safely remove any of them.
 
-    language = "en"
+    language = "hi"
     authors = listOf("digitalus")
 
     /**
@@ -17,9 +17,11 @@ cloudstream {
     status = 1 // Will be 3 if unspecified
 
     tvTypes = listOf(
-        "NSFW"
+        "Movie",
+        "TvSeries"
+
     )
-    iconUrl = "https://www.google.com/s2/favicons?domain=http://example.com&sz=256"
+    iconUrl = "https://fibwatch.art/themes/default/img/logo-light.png?cache=123"
 
     isCrossPlatform = true
 }

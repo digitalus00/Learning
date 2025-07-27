@@ -6,8 +6,8 @@ import com.lagradost.cloudstream3.plugins.Plugin
 
 
 @CloudstreamPlugin
-class TestPlugin: Plugin() {
+class fibwatchPlugin: Plugin() {
     override fun load(context: Context) {
-        registerMainAPI(demoTryProvider())
+        registerMainAPI(Fibwatch())
     }
 }
