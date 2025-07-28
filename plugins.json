@@ -341,6 +341,25 @@
     "description": "Fibwatch",
     "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/fibwatch.cs3",
     "name": "Fib Watch"
+  },
+    {
+    "iconUrl": "",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/digitalus00/Learning",
+    "fileSize": 10518,
+    "status": 1,
+    "language": "hi",
+    "authors": [
+      "digitalus00"
+    ],
+    "tvTypes": [
+      "Movie,Series"
+    ],
+    "version": 1,
+    "internalName": "Rtally",
+    "description": "Rtally",
+    "url": "https://raw.githubusercontent.com/digitalus00/Learning/builds/Rtally.cs3",
+    "name": "Rtally"
   }
    
    
